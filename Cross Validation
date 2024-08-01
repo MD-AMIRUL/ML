@@ -1,0 +1,40 @@
+Cross-validation is a statistical technique used in machine learning and statistics to evaluate and improve the performance of a model. It involves partitioning the dataset into subsets, training the model on some of these subsets, and testing it on the remaining subsets. This process helps in assessing how the model will generalize to an independent dataset and in mitigating overfitting.
+
+Key Concepts in Cross-Validation
+Training and Testing Data:
+
+Training Data: The subset of the data used to train the model.
+Testing Data: The subset of the data used to test the model's performance.
+Overfitting: When a model performs well on training data but poorly on unseen data, it is said to be overfitting. Cross-validation helps detect and prevent this.
+
+Validation Metrics: Metrics like accuracy, precision, recall, F1 score, and R^2 score are calculated during cross-validation to evaluate model performance.
+
+Common Types of Cross-Validation
+K-Fold Cross-Validation:
+
+The dataset is divided into 
+𝑘
+k equal-sized folds.
+The model is trained 
+𝑘
+k times, each time using 
+𝑘
+−
+1
+k−1 folds for training and the remaining fold for testing.
+The final performance metric is the average of the metrics from each fold.
+
+Leave-One-Out Cross-Validation (LOOCV):
+
+A special case of K-Fold Cross-Validation where 
+𝑘
+k equals the number of data points.
+Each data point is used once as a test set while the remaining points form the training set.
+Stratified K-Fold Cross-Validation:
+
+Similar to K-Fold but ensures that each fold has approximately the same percentage of samples of each target class.
+Useful for imbalanced datasets.
+Repeated K-Fold Cross-Validation:
+
+Repeats the K-Fold Cross-Validation process multiple times with different random splits.
+Helps in getting a more robust estimate of model performance
